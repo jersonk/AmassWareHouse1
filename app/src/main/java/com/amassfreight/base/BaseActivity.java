@@ -23,9 +23,9 @@ public class BaseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		_thisActivity = this;
 		Log.e("login_Activity:", _thisActivity.getClass().getSimpleName());
 
-		_thisActivity = this;
 		IUser user = SessionHelper.getInstance().getUser();
 		CharSequence strTitle = getTitle();
 		if (user != null
