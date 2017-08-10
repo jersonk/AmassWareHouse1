@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NoTitleDialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true" 
+    android:background="@color/encode_view"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- 进仓编号 -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/VA001_jc_no" />
+
+    <EditText
+        android:id="@+id/editCdPubOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:layout_marginLeft="25dp"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:ems="10" >
+    </EditText>
+    <!-- 服务类型 -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="25dp"
+        android:text="@string/service_type" />
+    <Spinner
+        android:id="@+id/spinner_serviceType"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/editCdPubOrder"
+        android:layout_alignRight="@+id/editCdPubOrder"
+        android:layout_below="@+id/editCdPubOrder"
+        android:prompt="@string/service_type"
+        android:layout_marginTop="15dp"
+        android:spinnerMode="dialog"
+        android:textSize="14sp" />
+
+	<!-- 完成状态 -->
+    <TextView
+        android:id="@+id/textComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="25dp"
+        android:text="@string/status_complete" />
+    <Spinner
+        android:id="@+id/spinner_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/spinner_serviceType"
+        android:layout_alignRight="@+id/spinner_serviceType"
+        android:layout_below="@+id/spinner_serviceType"
+        android:layout_marginTop="5dp"
+        android:prompt="@string/status_complete"
+        android:spinnerMode="dialog" />
+
+	<!-- 最晚时间（从） -->
+	<TextView
+	    android:id="@+id/textView4"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/spinner_complete"
+	    android:layout_marginRight="19dp"
+	    android:layout_marginTop="13dp"
+	    android:layout_toLeftOf="@+id/editFromDate"
+	    android:text="@string/VA001_lastTime_from" />
+
+    <EditText
+        android:id="@+id/editFromDate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_below="@+id/spinner_complete"
+        android:layout_alignLeft="@+id/spinner_complete"
+        android:layout_alignRight="@+id/spinner_complete"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"/>
+    
+    <!-- 最晚时间（到） -->
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="27dp"
+        android:text="@string/VA001_lastTime_to" />
+
+    <EditText
+        android:id="@+id/editToDate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignLeft="@+id/editFromDate"
+        android:layout_alignRight="@+id/editFromDate"
+        android:layout_below="@+id/editFromDate"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp" />
+</RelativeLayout>

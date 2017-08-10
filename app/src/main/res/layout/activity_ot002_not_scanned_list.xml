@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="30dip"
+    tools:context=".OT002Activity" >
+
+    <!-- 列表标题 -->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+       <!-- 库位 -->
+	   <TextView
+	     android:id="@+id/textViewLocation"
+	     android:layout_width="75dp"
+	     android:layout_height="wrap_content"
+	     android:layout_gravity="center_vertical"/>
+	   <LinearLayout
+	     android:id="@+id/linearLayout2"
+	     android:layout_width="140dp"
+	     android:layout_height="wrap_content"
+	     android:orientation="vertical" >
+	 		<!-- 进仓编号 -->
+		    <TextView
+		          android:id="@+id/textCdOrder"
+		          android:layout_width="wrap_content"
+		          android:layout_height="wrap_content"
+		          android:textColor="@color/blue"/>
+		     <!-- 同行编号 -->
+		     <TextView
+		          android:id="@+id/textCoLoader"
+		          android:layout_width="wrap_content"
+		          android:layout_height="wrap_content"/>
+		</LinearLayout>
+	    <!-- 桩脚牌 -->
+	   	<TextView
+	          android:id="@+id/textViewPileCard"
+	          android:layout_width="75dp"
+	          android:layout_height="wrap_content"
+	          android:layout_gravity="center_vertical"/>
+	     <!-- 件数 -->
+	     <TextView
+	          android:id="@+id/textViewNum"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_marginRight="10dp"
+	          android:layout_gravity="center_vertical"/>  
+     </LinearLayout>
+</RelativeLayout>

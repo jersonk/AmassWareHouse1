@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encode_view">
+
+    <LinearLayout
+        android:id="@+id/center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listVas"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Add_Vas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="@string/VA004_Btn_Add_Mvs"
+            android:textSize="16sp" 
+            android:background="@drawable/default_button_style"
+            android:layout_marginRight="5dip"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_Approval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="@string/VA004_Btn_Approal"
+            android:textSize="16sp" 
+            android:background="@drawable/default_button_style"
+            android:layout_marginRight="5dip"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

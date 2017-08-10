@@ -1,0 +1,939 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encode_view"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.ScActivity" >
+
+    <LinearLayout
+        android:id="@+id/layTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top|left"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblInStore"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN004_INSERT_STORE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtInStore"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN004_THNO"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblPC"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN004_PC_TITLE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPC"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblNoPilecard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN004_NOPILECARD_ITEM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNoPilecard"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+         <!-- add by yxq 2014/09/03 begin -->
+         <LinearLayout
+            android:id="@+id/linLayNoMulDepot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal" >
+            <!-- 进仓分票号 -->
+            <TextView
+                android:id="@+id/lblNoMultipleDepot"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN004_NO_MULTIPLE_DEPOT"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edit_NoMultipleDepot"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp" 
+                android:maxLength="4">
+            </EditText>
+            <TextView
+                android:id="@+id/lblNoMultipleColo"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN004_NO_MULTIPLE_COLO"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edit_NoMultipleColo"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp" 
+                android:maxLength="4">
+            </EditText>
+         </LinearLayout>
+         <!-- add by yxq 2014/09/03 end -->
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layTop"
+        android:layout_marginTop="3dp"
+        android:background="#000000" >
+    </View>
+
+    <LinearLayout
+        android:id="@+id/carContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblCarNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN004_CAR_NO"
+                android:textColor="@color/red"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_CarArea"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:textSize="15sp" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_CarNo"
+                android:layout_width="102dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:digits="1234567890QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textSize="14sp" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/lblCarType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/DN004_CAR_TYPE"
+                android:textColor="@color/red"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_CarType"
+                android:layout_width="104dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="2dp"
+                android:prompt="@string/DN004_CARTYPE_SELECT"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <!-- 注销 by yxq 2014/09/03 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblTicketNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN004_TICKET_NO"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_Ticket1"
+                android:layout_width="68dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:prompt="@string/DN004_TICKETNO_SELECT"
+                android:spinnerMode="dialog" />
+           -->
+		  <!--  注销 by yxq 2014/08/26
+          <TextView
+                android:id="@+id/lblShortLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="@string/DN004_SHORT_LINE"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_Ticket2"
+                android:layout_width="68dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:prompt="@string/DN004_TICKETNO_SELECT"
+                android:spinnerMode="dialog" /> -->
+            <!-- 注销 by yxq 2014/09/03 
+            <TextView
+                android:id="@+id/lblSameCarNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/DN004_SAMECAR_NO"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_SameCarNo"
+                android:layout_width="102dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp" >
+            </EditText>
+            
+            add by yxq 2014/08/26 begin
+                                   已扫描n票
+            <TextView
+                android:id="@+id/textScanedNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            add by yxq 2014/08/26 end
+        </LinearLayout>
+         -->
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="3dp"
+            android:background="#000000" >
+        </View>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/src_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/carContent"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <!-- add by yxq 2014/09/24 begin -->
+            <!-- 复量 -->
+            <LinearLayout
+                android:id="@+id/layReaMea"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+               <!-- 复量正确 -->
+	           <CheckBox
+	                android:id="@+id/chkReaMeaOK"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="64dp"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	            <TextView
+	                android:id="@+id/textReaMeaOK"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN004_REA_MEA_OK" />
+	           <!-- 复量尺寸 -->
+	           <CheckBox
+	                android:id="@+id/chkReaMeaSize"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="40dp"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	           <TextView
+	                android:id="@+id/textReaMeaSize"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN004_REA_MEA_SIZE" />
+            </LinearLayout>
+            <!-- add by yxq 2014/09/24 end -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblMeterModel"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_METER_MODEL"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_MeterModel"
+                    android:layout_width="132dp"
+                    android:layout_height="43dp"
+                    android:prompt="@string/DN004_METERMODEL_SELECT"
+                    android:spinnerMode="dialog"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/lblLong"
+                    android:layout_width="61dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_LONG_CM"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:digits="1234567890."
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblWide"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_WIDE_CM"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Wide"
+                    android:layout_width="130dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="1dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblHigh"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_HIGH_CM"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_High"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblNumber"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_NUMBER"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Number"
+                    android:layout_width="130dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="1dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblArgueNumber"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_ARGUE_NUMBER"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_ArgueNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblVolume"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_VOLUME"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Volume"
+                    android:layout_width="130dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="1dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblWeight"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_WEIGHT"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="19"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblPackUnit"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_PACK_UNIT"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_PackUnit"
+                    android:layout_width="132dp"
+                    android:layout_height="43dp"
+                    android:gravity="left"
+                    android:prompt="@string/DN004_PACKUNIT_SELECT"
+                    android:spinnerMode="dialog"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/lblDock"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_DOCK"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Dock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|left"
+                    android:inputType="numberDecimal"
+                    android:maxLength="18"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblPackType"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_PACK_TYPE"
+                    android:textSize="13sp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_PackType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layPos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblPos"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_POS"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Pos"
+                    android:layout_width="130dp"
+                    android:layout_height="38dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblStore"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_STORE"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|left"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layCopies"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblTruck"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_TRUCK"
+                    android:textColor="@color/red"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/sp_Truck"
+                    android:layout_width="132dp"
+                    android:layout_height="43dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/lblCopies"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_COPIES"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Copies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+            
+            <!-- add by yxq 2014/09/24 begin -->
+            <LinearLayout
+                android:id="@+id/layCopies_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblCopies_1"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/DN004_COPIES"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Copies_1"
+                    android:layout_width="132dp"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textSize="13sp" >
+                </EditText>
+            </LinearLayout>
+            <!-- add by yxq 2014/09/24 end -->
+
+            <LinearLayout
+                android:id="@+id/linOpr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/activity_dn004_oprlwh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblRemark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/DN004_REMARK"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txtRemark"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:lines="4"
+                    android:maxLength="500"
+                    android:singleLine="false"
+                    android:textSize="13sp" 
+                    android:textColor="@color/red"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFF"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Save"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_Save_OnClick"
+            android:text="@string/DN004_SAVE" />
+        
+        <!-- add by yxq 2014/09/16 begin -->
+        <!-- 保存（复量） -->
+        <Button
+            android:id="@+id/btn_Rea_Mea"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_ReaMea_SAVE_OnClick"
+            android:text="@string/DN004_SAVE" 
+            android:visibility="gone"/>
+        <!-- add by yxq 2014/09/16 end -->
+        <!-- add by yxq 2014/10/20 begin -->
+        <!-- 保存（更改包装） -->
+        <Button
+            android:id="@+id/btn_Change_Pack"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_ChangePack_SAVE_OnClick"
+            android:text="@string/DN004_SAVE" 
+            android:visibility="gone"/>
+        <!-- add by yxq 2014/10/20 end -->
+        <!-- add by yxq 2014/10/20 begin -->
+        <!-- 保存（更改件数、称重共通） -->
+        <Button
+            android:id="@+id/btn_VA003_Save_Common"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_VA003_Save_Common_OnClick"
+            android:text="@string/DN004_SAVE" 
+            android:visibility="gone"/>
+        <!-- add by yxq 2014/10/20 end -->
+
+        <Button
+            android:id="@+id/btn_Print"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_Print_OnClick"
+            android:text="@string/DN004_PRINT" />
+
+        <Button
+            android:id="@+id/btn_Return"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_ReturnOk_OnClick"
+            android:text="@string/DN004_RETURN_OK" />
+
+        <Button
+            android:id="@+id/btn_Error"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_Error_OnClick"
+            android:text="@string/DN002_ERROR_BTN" />
+    </LinearLayout>
+
+</RelativeLayout>

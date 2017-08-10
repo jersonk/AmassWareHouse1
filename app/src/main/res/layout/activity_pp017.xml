@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relatBtnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:gravity="top" >
+
+        <LinearLayout
+            android:id="@+id/center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/src_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/linShow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/linMain"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical" >
+
+                        <!-- 集箱号 -->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:padding="3dip"
+                                android:text="@string/PP017_label_boxNo"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/boxNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:padding="3dip"
+                                android:text="@string/PP017_label_requireMsg"
+                                android:textStyle="bold" 
+                                android:textColor="@color/red" />
+                               
+                        </LinearLayout>
+
+                        
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#000" />
+                    </LinearLayout>
+
+                    <!-- 底部的listview -->
+
+                    <com.amassfreight.widget.ScrollListView
+                        android:id="@+id/unPackingList"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="#000"
+                        android:dividerHeight="0.5dp"
+                        android:fadeScrollbars="false"
+                        android:scrollbarFadeDuration="0" >
+                    </com.amassfreight.widget.ScrollListView>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#000" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/default_button_style"
+                android:onClick="back_OnClick"
+                android:text="@string/VA001_Return" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

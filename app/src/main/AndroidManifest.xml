@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amassfreight.warehouse">
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.ApApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme" >
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:label="@string/title_activity_barcode"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <activity
+            android:name="com.google.zxing.client.android.PreferencesActivity"
+            android:label="@string/preferences_name"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".ui.AppSettingActivity"
+            android:label="@string/preferences_name"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".ui.VA004Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".MainScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_main_screen"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.VA001Activity"
+            android:label="@string/title_activity_sc"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.VA003Activity"
+            android:label="@string/title_activity_va003"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.VA003_TransferActivity"
+            android:label="@string/VA003_transfer"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.VA003_PrePicActivity"
+            android:label="@string/VA003_pre_transfer_pic"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.VA006Activity"
+            android:label="@string/title_activity_va006"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.OT001Activity"
+            android:label="@string/title_activity_ot001"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".ui.OT001_InBatchActivity"
+            android:label="@string/title_activity_ot001_Batch"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".ui.OT002Activity"
+            android:label="@string/title_activity_ot002"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.OT003Activity"
+            android:label="@string/title_activity_ot002"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity android:name="com.amassfreight.widget.GalleryAct" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP003Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/PP003_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP004Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/PP004_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP005Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/PP005_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP006Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/PP006_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP007Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/PP007_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.DN001Activity"
+            android:label="@string/DN001_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.DN002Activity"
+            android:label="@string/DN002_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".ui.DN003Activity"
+            android:label="@string/DN003_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.DN004Activity"
+            android:label="@string/DN004_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".ui.DN005Activity"
+            android:label="@string/DN005_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".ui.DN006Activity"
+            android:label="@string/DN006_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.RC001Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/RC001_title"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP008Activity"
+            android:label="@string/PP008_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP008Activity_FCL"
+            android:label="@string/PP008_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP008Activity_SCL"
+            android:label="@string/PP008_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP009Activity"
+            android:label="@string/PP009_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP010Activity"
+            android:label="@string/PP010_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP010Activity_FCL"
+            android:label="@string/PP010_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP010Activity_SCL"
+            android:label="@string/PP010_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP010Activity_Depot"
+            android:label="@string/PP010_TITLE_DEPOT_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP011Activity"
+            android:label="@string/PP011_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP011Activity_Spilt"
+            android:label="@string/DN004_EDIT_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP012Activity"
+            android:label="@string/PP012_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP013Activity"
+            android:label="@string/PP013_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP015Activity"
+            android:label="@string/PP015_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".ui.RC002Activity"
+            android:label="@string/RC002_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP014Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/PP014_title" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP001Activity"
+            android:label="@string/PP001_TITLE_NAME"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" >
+        </activity>
+
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:label="@string/title_activity_change_password" >
+        </activity>
+
+        <activity
+            android:name=".ui.DN001Activity_Single"
+            android:label="@string/DN001_Single_title"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.PP016Activity"
+            android:label="@string/PP007_pack_photo_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".ui.PP017Activity"
+            android:label="@string/PP017_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".ui.OT004Activity"
+            android:label="@string/title_activity_ot004"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".ui.DN008Activity"
+            android:label="@string/DN008_title" >
+        </activity>
+
+    </application>
+
+</manifest>

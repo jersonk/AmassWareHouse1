@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/imgLiner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#90CCCC99"
+        android:gravity="right"
+        android:onClick="Btn_collapse_expand_OnClick"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#90CCCC99"
+            android:gravity="left"
+            android:onClick="Btn_collapse_expand_OnClick"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:onClick="Btn_collapse_expand_OnClick"
+                android:text="@string/jxno"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTitleNoBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="1dp"
+                android:onClick="Btn_collapse_expand_OnClick"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:onClick="Btn_collapse_expand_OnClick"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/imgBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:onClick="Btn_collapse_expand_OnClick"
+                    android:src="@drawable/collapse" />
+
+                <TextView
+                    android:id="@+id/tvOPrName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="Btn_collapse_expand_OnClick"
+                    android:text="@string/status_up"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#000" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relatBtnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:gravity="top" >
+
+        <LinearLayout
+            android:id="@+id/center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/src_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/linShow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/linMain"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0"
+                            android:orientation="vertical" >
+
+                            <!-- 集箱号 -->
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:gravity="left"
+                                    android:text="@string/jxno"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_jxno"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"/>
+                                
+                                <TextView
+                                    android:id="@+id/tvDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/PP006_box_detail"
+                                    android:padding="3dip"
+                                    android:textColor="@color/blue"
+                                    android:textStyle="bold" />
+
+                                <!-- 装箱状态 -->
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="@string/zxstatus"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_zxstatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:padding="3dip"
+                                    android:text="@string/DN001_JHY_CONTENT"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/planner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dip" />
+                            </LinearLayout>
+                            
+                            
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:padding="3dip"
+                                    android:text="@string/zx_deadline"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_zxdeadline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="3dip"
+                                    android:textColor="#f00" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:padding="3dip"
+                                android:text="@string/zx_rules"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/pickingRequire"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:textColor="@color/red"
+                                android:background="@drawable/zxrules_textview_bg"
+                                android:padding="3dip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/packPhotoQuery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dip"
+                                android:gravity="right"
+                                android:textColor="@color/blue"
+                                android:textStyle="bold" 
+                                android:text="@string/PP007_pack_photo_query" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#000" />
+                    </LinearLayout>
+
+                    <!-- 底部的listview -->
+
+                    <com.amassfreight.widget.ScrollListView
+                        android:id="@+id/lv_zjp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="#000"
+                        android:dividerHeight="0.5dp"
+                        android:fadeScrollbars="false"
+                        android:scrollbarFadeDuration="0" >
+                    </com.amassfreight.widget.ScrollListView>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#000" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/unPacking"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dip"
+                android:onClick="unPacking_OnClick"
+                android:background="@drawable/default_button_style"
+                android:text="@string/PP006_button_unPacking" />
+
+            <Button
+                android:id="@+id/allPackedCompel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dip"
+                android:onClick="allPacked_Compel_OnClick"
+                android:background="@drawable/default_button_style"
+                android:text="@string/PP010_PACKING_COMPULAORY" />
+            
+            <Button
+                android:id="@+id/allPacked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dip"
+                android:onClick="allPacked_OnClick"
+                android:background="@drawable/default_button_style"
+                android:text="@string/PP006_button_allPacked" />
+
+            <Button
+                android:id="@+id/CancelAllPacked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dip"
+                android:onClick="CancelAllPacked_OnClick"
+                android:background="@drawable/default_button_style"
+                android:text="@string/PP006_button_CancelAllPacked" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

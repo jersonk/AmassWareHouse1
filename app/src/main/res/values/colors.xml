@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+
+
+
+
+-->
+<resources>
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#ffc0c0c0</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#EEEE00</color>
+    <color name="orangle">#FF9900</color>
+    <color name="gay">#999999</color>
+    <color name="lightBlue">#00FFFF</color>
+    <color name="lightGreen">#2EFE9A</color>
+    <!-- 橙色 -->
+    <color name="orange">#FFA500</color>
+    <color name="listview_back_odd">#30FFFFFF</color>
+    <color name="listview_back_uneven">#30CCCC99</color>
+    <color name="grouplist_color">#87CEFA</color>
+    <color name="tools_white">#FFF</color>
+    <color name="tools_black">#000</color>
+    <color name="text_black_1">#88000000</color>
+    <color name="text_black_2">#AA000000</color>
+
+    <color name="base_color_BC3">#333333</color>
+    <color name="base_color_BC4">#666666</color>
+    <color name="base_color_BC7">#f4f4f4</color>
+
+</resources>

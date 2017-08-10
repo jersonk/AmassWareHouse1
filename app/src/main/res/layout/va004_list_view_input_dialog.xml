@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:focusable="true"
+        android:focusableInTouchMode="true" 
+        android:orientation="vertical">  
+        
+        <!-- 添加耗材名称和数量时，显示 begin-->
+        <TextView  
+            android:id="@+id/txtPopMvsName_ins"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text="@string/VA004_Pop_MvsName" 
+        	android:layout_marginBottom="5dp"
+            android:textColor="#FFFFFF" />  
+      
+        <Spinner
+       		android:id="@+id/sp_Vas"
+       		android:layout_width="fill_parent"
+       		android:layout_height="wrap_content"
+       		android:gravity="left"
+       		android:layout_below="@+id/txtPopMvsName_ins"
+        	android:layout_marginBottom="5dp"
+       		android:spinnerMode="dialog"/>
+       <!-- 添加耗材名称和数量时，显示  end-->
+       
+       <!-- 只修改数量时，显示  begin-->
+       <TextView  
+            android:id="@+id/txtPopMvsName_upd"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+        	android:layout_marginBottom="5dp"
+            android:textColor="#FFFFFF" />
+       <!-- 只修改数量时，显示  end-->
+       
+       <!-- add by yxq 2014/09/25 begin -->
+       <LinearLayout
+            android:id="@+id/linLay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_below="@+id/sp_Vas"
+            android:orientation="vertical" >
+       <!-- add by yxq 2014/09/25 end -->
+	       <!-- 耗材所属 -->
+	       <TextView  
+	            android:id="@+id/txtBelong"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:text="@string/VA004_Pop_MvsBelong" 
+	        	android:layout_marginBottom="5dp"
+	            android:textColor="#FFFFFF" />  
+	      
+	       <RadioGroup
+	       		android:id="@+id/radioGroup"
+	       		android:layout_width="fill_parent"
+	       		android:layout_height="wrap_content"
+	       		android:gravity="center"
+	        	android:layout_marginBottom="5dp"
+	        	android:orientation="horizontal"/>
+	       
+	       <!-- 数量 -->
+	       <TextView  
+	            android:id="@+id/txtPopMvsNum"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:text="@string/VA004_Pop_MvsNum" 
+	        	android:layout_marginBottom="5dp"
+	            android:textColor="#FFFFFF" />  
+	      
+	      <EditText  
+	            android:id="@+id/editTextNum"  
+	            android:layout_width="fill_parent"  
+	            android:layout_height="wrap_content" 
+	        	android:layout_marginBottom="5dp"
+	            android:numeric="decimal"/>
+	      
+	      	<!-- 重量 -->
+	       <TextView  
+	            android:id="@+id/txtPopMvsWeight"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:text="@string/VA004_Pop_MvsWeight" 
+	        	android:layout_marginBottom="5dp"
+	            android:textColor="#FFFFFF" />  
+	      
+	      <EditText  
+	            android:id="@+id/editTextWeight"  
+	            android:layout_width="fill_parent"  
+	            android:layout_height="wrap_content" 
+	        	android:layout_marginBottom="5dp"
+	            android:numeric="decimal"/>
+	      
+	      <!-- 总重量 -->
+	       <TextView  
+	            android:id="@+id/txtPopMvsTotalWeight"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:text="@string/VA004_Pop_MvsTotalWeight" 
+	        	android:layout_marginBottom="5dp"
+	            android:textColor="#FFFFFF" />  
+	      
+	      <EditText  
+	            android:id="@+id/editTextTotalWeight"  
+	            android:layout_width="fill_parent"  
+	            android:layout_height="wrap_content" 
+	        	android:layout_marginBottom="5dp"
+	        	android:editable="false"
+	            android:numeric="decimal"/>
+      </LinearLayout>
+        
+   	   <LinearLayout
+        	android:id="@+id/lineBottom"
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:gravity="center_vertical"
+        	android:layout_below="@+id/linLay"
+        	android:layout_marginTop="15dp"
+        	android:orientation="horizontal" >
+        	
+        <Button
+        	android:id="@+id/btn_save"
+        	android:layout_width="80dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginRight="20dp"
+        	android:layout_marginLeft="60dp"
+        	android:text="@string/VA004_Pop_Btn_Save" 
+        	android:gravity="center"/>
+            
+         <Button
+        	android:id="@+id/btn_cancel"
+        	android:layout_width="80dp"
+        	android:layout_height="wrap_content"
+        	android:text="@string/VA004_Pop_Btn_Cancel"
+        	android:layout_marginRight="60dp"
+        	android:gravity="center"
+        	/>
+       </LinearLayout>
+    </RelativeLayout>      
+    

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity" >
+
+    <TextView
+        android:id="@+id/lb_login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/login_username" />
+
+    <EditText
+        android:id="@+id/edit_login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lb_login_username"
+        android:layout_alignBottom="@+id/lb_login_username"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/lb_login_username"
+        android:ems="10"
+        android:hint="@string/login_username"
+        android:inputType="number"
+        android:maxLength="20"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textRefreshNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/depotno_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/waring_network_connect" />
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textRefreshNetwork"
+        android:layout_centerHorizontal="true"
+        android:text="@string/refresh_network" />
+
+    <Spinner
+        android:id="@+id/depotno_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/edit_login_username"
+        android:layout_alignLeft="@+id/edit_login_username"
+        android:layout_below="@+id/edit_login_username"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/textPlanNm"
+        android:prompt="@string/wh_select"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:id="@+id/textPlanNm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lb_login_username"
+        android:layout_below="@+id/edit_login_username"
+        android:layout_marginTop="24dp"
+        android:text="@string/wh_select" />
+  <com.amassfreight.widget.SquaredPassWord
+        android:id="@+id/passwordView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textPlanNm"
+        android:layout_below="@+id/depotno_list"
+        android:layout_marginTop="15dp" />
+</RelativeLayout>

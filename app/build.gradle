@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        multiDexEnabled true
+        multiDexKeepFile file("multidex.keep")
+        applicationId "com.amassfreight.warehouse"
+        minSdkVersion 15
+        targetSdkVersion 18
+
+        versionCode 169
+        versionName "2.0 build 1" //测试包名
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("amass.keystore")
+            storePassword "123456"
+            keyAlias "amass.keystore"
+            keyPassword "123456"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false   //混淆配置(暂不配置)
+            zipAlignEnabled true //压缩优化
+            shrinkResources false //移除无用的资源文件(同步混淆)
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs 'libs'
+        }
+    }
+
+    dexOptions {
+        incremental = true;
+        preDexLibraries = false
+        javaMaxHeapSize "4g" // 2g should be also OK
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+}

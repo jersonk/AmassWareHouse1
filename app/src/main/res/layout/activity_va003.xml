@@ -1,0 +1,421 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VA003Activity" >
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:text="@string/jc_no"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textCdPublicOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textStyle="bold" />
+
+        <!-- "查看附件"按钮 -->
+
+        <TextView
+            android:id="@+id/linkViewAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="Btn_View_Attachment"
+            android:text="@string/view_attachment"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+    </GridLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_marginBottom="60dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="10dp"
+                    android:layout_row="0"
+                    android:text="@string/service_remark" />
+
+                <TextView
+                    android:id="@+id/textServiceRemark"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="fill_horizontal|top"
+                    android:layout_marginRight="10dp"
+                    android:layout_row="0" />
+                <!-- "操作对象" -->
+
+                <TextView
+                    android:id="@+id/textObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_row="1"
+                    android:text="@string/VA003_Object"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </GridLayout>
+
+            <View
+                android:id="@+id/linePilecardOrig_Up"
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="#000000" />
+
+            <com.amassfreight.widget.ScrollListView
+                android:id="@+id/listPileCard_Orig"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </com.amassfreight.widget.ScrollListView>
+
+            <View
+                android:id="@+id/linePilecardOrig_Down"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="#000000"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_MTPhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- 核销 -->
+
+                <CheckBox
+                    android:id="@+id/chkMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/textMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/VA003_check_true" />
+                <!-- 不核销 -->
+
+                <CheckBox
+                    android:id="@+id/chkNotMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+				
+                <TextView
+                    android:id="@+id/textNotMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/VA003_check_false" />
+                
+                <!-- 装卸工 -->
+                <CheckBox
+                    android:id="@+id/chkFlgLoader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/textFlgLoader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/VA003_flgloader_true" />
+                <!-- 客服 -->
+                <CheckBox
+                    android:id="@+id/chkFlgService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/textFlgService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/VA003_flgservice_true" />                
+                
+
+            </LinearLayout>
+			<LinearLayout
+                android:id="@+id/linearLayout_PreTransferPic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/lbl_preTransferPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:text="@string/VA003_pre_transfer_pic"
+                    android:textStyle="bold" />			    
+			</LinearLayout>
+            <!-- 图片 -->
+
+            <com.amassfreight.widget.ScrollGridView
+                android:id="@+id/gridView_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" >
+            </com.amassfreight.widget.ScrollGridView>
+            <!-- 新增桩脚牌的列表标题 -->
+
+            <LinearLayout
+                android:id="@+id/layoutPilecardNew"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 新加对象 -->
+
+                <TextView
+                    android:id="@+id/labelObj_New"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/VA003_Object_New"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <!-- 批次 -->
+
+                    <TextView
+                        android:id="@+id/labelBatchNo_New"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VA003_BatchNo_New"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <!-- 桩脚牌 -->
+
+                    <TextView
+                        android:id="@+id/labelPilecardId_New"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/VA003_PilecardId_New"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <!-- 库区库位 -->
+
+                    <TextView
+                        android:id="@+id/labelPos"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/VA003_Pos_New"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <!-- 件毛体 -->
+
+                    <TextView
+                        android:id="@+id/labelNWS_New"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/VA003_NWS_New"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/linePilecardNew_Up"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="#000000"
+                android:visibility="gone" />
+            <!-- 新增桩脚牌 -->
+
+            <com.amassfreight.widget.ScrollListView
+                android:id="@+id/listPileCard_New"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </com.amassfreight.widget.ScrollListView>
+
+            <View
+                android:id="@+id/linePilecardNew_Down"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="#000000"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 耗材列表 -->
+
+        <Button
+            android:id="@+id/btnVasList"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_VasList_OnClick"
+            android:text="@string/title_activity_VA004"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “新增桩脚牌”按钮 -->
+
+        <Button
+            android:id="@+id/btnAddPileCard"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_AddPileCard_OnClick"
+            android:text="@string/VA003_Btn_Add_Pilecard"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “打印所有桩脚牌”按钮 -->
+
+        <Button
+            android:id="@+id/btnPrintPileCard_Batch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_PrintPilecardBatch_OnClick"
+            android:text="@string/VA003_Btn_Print_Pilecard"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “完成”按钮 -->
+
+        <Button
+            android:id="@+id/btnComplete"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_Complete_OnClick"
+            android:text="@string/VA003_Btn_Complete"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “取消完成”按钮 -->
+
+        <Button
+            android:id="@+id/btnCancelComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_CancelComplete_OnClick"
+            android:text="@string/VA003_Btn_CancleComplete"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “完成”按钮 -->
+
+        <Button
+            android:id="@+id/btnUpdateStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_UpdateStatus_OnClick"
+            android:text="@string/VA003_Btn_Complete"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “保存”按钮 -->
+
+        <Button
+            android:id="@+id/btnTempSave"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_TempSave_OnClick"
+            android:text="@string/VA003_Btn_TempSave"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!-- “上传照片”按钮 -->
+
+        <Button
+            android:id="@+id/btnUploadPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/default_button_style"
+            android:onClick="Btn_UploadPhoto_OnClick"
+            android:text="@string/VA003_Btn_UploadPhoto"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

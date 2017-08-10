@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+<TextView
+    android:id="@+id/text_error"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:text="@string/OT001_error_search_depot"
+    android:textColor="@color/red"
+    android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/DN006_INSTORE_ITEM"
+            android:textSize="16sp" />
+
+        <EditText 
+            android:id="@+id/et_cdOrder"
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/DN006_TH_ITEM"
+            android:textSize="16sp" />
+
+        <EditText 
+            android:id="@+id/et_coLoader"
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_noBatch_space"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_noBatch"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:singleLine="true"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/DN006_ZJID_ITEM"
+            android:textSize="16sp" />
+
+        <EditText 
+            android:id="@+id/et_pileCard"
+            android:layout_weight="4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/standard_padding"
+                android:text="@string/RC001_deliv_id" />
+
+            <TextView
+                android:id="@+id/tv_deliv_id"
+                style="@style/RCContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:gravity="left" />
+
+            <TextView
+                style="@style/RCContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+            <!--
+                 <Button
+                android:id="@+id/btn_print_jincang_confirm"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/default_button_style"
+                android:text="@string/RC001_btn_print_jincang_confirm" />
+            -->
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/black_overlay" />
+
+        <!-- 放货编号对应的信息 -->
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_deliv_date" />
+
+                <TextView
+                    android:id="@+id/tv_deliv_date"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"/>
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_tihuoren" />
+
+                <TextView
+                    android:id="@+id/tv_tihuoren"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" />
+            </TableRow>
+
+            <!-- 第二行 -->
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_dr_no" />
+
+                <TextView
+                    android:id="@+id/tv_dr_no"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" />
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_contact_no" />
+
+                <TextView
+                    android:id="@+id/tv_contact_tel"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"/>
+            </TableRow>
+
+            <!-- 第三行 -->
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_flag" />
+
+                <TextView
+                    android:id="@+id/tv_flag"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"/>
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_total_num" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_total_num"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" />               
+                
+                <TextView
+                    android:id="@+id/tv_delivnm_already"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_deliv_type" />
+
+                <TextView
+                    android:id="@+id/tv_deliv_type"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" />
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_fanghuo_status_s" />
+
+                <TextView
+                    android:id="@+id/tv_deliv_status_fin"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="40dip"
+                    android:gravity="left" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/RCTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/RC001_deliv_comment" />
+
+                <TextView
+                    android:id="@+id/tv_deliv_comment"
+                    style="@style/RCContentStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:layout_weight="3"
+                    android:gravity="left" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <!-- 第二层 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <!-- 分割线 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/black_overlay" />
+
+        <!-- 放货单对应的批次，所属批次的合并信息 -->
+
+        <ExpandableListView
+            android:id="@+id/lv_tv_deliv_bat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </ExpandableListView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/black_overlay" />
+    </LinearLayout>
+
+    <!-- 第三层 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_weight="0" >
+
+        <CheckBox
+            android:id="@+id/chk_print_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dip"
+            android:text="@string/label_allSelect"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <!-- 打印桩脚牌 -->
+
+            <Button
+                android:id="@+id/btn_pilecard"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/default_button_style"
+                android:text="@string/VA003_Print" />
+
+            <!-- 放货完成 -->
+
+            <Button
+                android:id="@+id/btn_deliv_ok"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/default_button_style"
+                android:text="@string/RC001_btn_fanghuo_ok" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

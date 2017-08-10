@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:minHeight="45dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblErrorNo"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/lblTallyman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN003_TALLYMAN_ITEM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTallyman"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+
+            <TextView
+                android:id="@+id/lblInserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN003_INSERTTIME_ITEM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtInserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/lblPlanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN003_APPROVAL_ITEM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPlanner"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+
+            <TextView
+                android:id="@+id/lblReverTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN003_REVERTIME_ITEM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtReverTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- 船名航次 -->
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:gravity="right"
+            android:textSize="15sp"
+            android:text="@string/PP003_vesselNm"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vesselNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 卸货港 -->
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_fdestNm"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fdestNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 集箱号 -->
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP012_CONTAINER"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/boxNo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 箱型 -->
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_boxNm"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/boxNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- M.B/L NO -->
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_mblCd"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mblCd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 箱封号 -->
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_containerCd"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/containerCd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 装箱最晚完成时间 -->
+
+<!--     <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:text="@string/zx_deadline"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/deadLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#f00"
+            android:padding="3dip" />
+    </TableRow> -->
+
+    <!-- ETD -->
+
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_etd"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/etd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 操作 -->
+
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_operatorNm"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+    <!-- 港区 -->
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:text="@string/PP003_portArea"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/portArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="3dip" />
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hsv"
+    android:layout_width="wrap_content"
+    android:layout_height="80dip"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/hor_Line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblInStore"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right"
+                    android:text="@string/DN006_INSTORE_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInStore"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/lblTH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/DN006_TH_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtTH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hor_Line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hor_Line1"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblNo"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN006_PNO_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtNo"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/lblFootNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/DN006_ZJID_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtFootNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hor_Line3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hor_Line2"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblOldStore"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="@string/DN006_OLDSTORE_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOldStore"
+                    android:layout_width="62dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp" />
+
+                <TextView
+                    android:id="@+id/lblStore"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:text="@string/DN006_STORE_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtStore"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_action"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_Del"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:background="@color/red"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="@string/DN006_BTN_DELETE"
+                android:textColor="@color/result_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</HorizontalScrollView>

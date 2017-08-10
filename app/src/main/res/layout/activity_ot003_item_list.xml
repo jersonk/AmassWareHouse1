@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="40dip"
+    tools:context=".OT003Activity" >
+    <!-- 明细 -->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >																						
+	   <!-- 桩脚牌 -->
+	   <TextView
+         android:id="@+id/textPileCard"
+         android:layout_width="50dp"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="2dp"/>
+	   <!-- 库区库位 -->
+	   <TextView
+         android:id="@+id/textPosAndLocation"
+         android:layout_width="65dp"
+         android:layout_marginLeft="2dp"
+	     android:layout_height="wrap_content"/>
+	   <!-- 件毛体 -->	
+	   <TextView
+         android:id="@+id/textNWS"
+         android:layout_width="50dp"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="2dp"/>
+	   <!-- add by yxq 2014/10/22 begin -->
+	   <!-- 创建日期 -->	
+	   <TextView
+         android:id="@+id/textCreateDate"
+         android:layout_width="65dp"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="2dp"/>		
+	   <!-- 盘点人 -->	
+	   <TextView
+         android:id="@+id/textNmStocktaking"
+         android:layout_width="50dp"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="2dp"/>		
+	   <!-- 盘点日期 -->	
+	   <TextView
+         android:id="@+id/textDtStocktaking"
+         android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="2dp"/>		
+	 <!-- add by yxq 2014/10/22 end -->																
+     </LinearLayout>
+</RelativeLayout>

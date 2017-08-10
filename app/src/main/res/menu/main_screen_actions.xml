@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/logout_action"
+        android:icon="@drawable/ic_action_remove"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/logout_menu">
+    </item>
+    <item
+        android:id="@+id/changepwd_action"
+        android:showAsAction="never"
+        android:title="@string/title_activity_change_password">
+    </item>
+    <item
+        android:id="@+id/clearcache_action"
+        android:showAsAction="never"
+        android:title="@string/activity_clear_cache">
+    </item>
+    <item
+        android:id="@+id/clearpic_action"
+        android:showAsAction="never"
+        android:title="@string/activity_clear_pic">
+    </item>
+
+</menu>

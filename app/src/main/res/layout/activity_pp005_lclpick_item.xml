@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <!--桩脚牌号-->
+    <TextView
+        android:id="@+id/pileCardCd"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:padding="3dip" />
+    
+    <!-- 库区库位 -->
+    <TextView
+        android:id="@+id/posAndLoc"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:padding="3dip"  />
+    
+    <!-- 件数 -->
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:padding="3dip"  />
+    
+    <!-- 拣货状态 -->
+    <TextView
+        android:id="@+id/pickStatus"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="3dip" />
+    
+    <!-- 装箱状态 -->
+    <TextView
+        android:id="@+id/packStatus"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:padding="3dip" />
+
+</LinearLayout>

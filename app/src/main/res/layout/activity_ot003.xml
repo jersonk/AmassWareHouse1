@@ -1,0 +1,234 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".OT003Activity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 进仓编号 -->
+        <TextView
+            android:id="@+id/labelCdOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/OT003_Label_CdOrder"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editCdOrderPublic"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp" >
+        </EditText>
+        <!-- 集装箱状态 -->
+        <TextView
+            android:id="@+id/labelContainerStatusNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+    <!-- add by yxq 2014/10/27 begin -->
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <!-- 同行编号 -->
+        <TextView
+            android:id="@+id/labelCdLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/OT003_Label_CdLoader"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editCdLoader"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp" >
+        </EditText>
+    </LinearLayout>
+    <!-- add by yxq 2014/10/27 end -->
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_height="0.5dip"
+        android:background="#000000" />
+    <!-- 列表标题 -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line1"
+        android:orientation="horizontal" >
+        <!-- 桩脚牌 -->
+        <TextView
+            android:id="@+id/labelPileCard"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/OT003_Label_PileCard"
+            android:textStyle="bold" />
+        <!-- 库区库位 -->
+        <TextView
+            android:id="@+id/labelPosAndLocation"
+            android:layout_width="65dp"
+            android:layout_marginLeft="2dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/OT003_Label_PosAndLocation"
+            android:textStyle="bold" />
+        <!-- 件毛体 -->
+        <TextView
+            android:id="@+id/labelNWS"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:text="@string/OT003_Label_NWS"
+            android:textStyle="bold" />
+        <!-- add by yxq 2014/10/22 begin -->
+        <!-- 创建日期 -->
+        <TextView
+            android:id="@+id/labelCreateDate"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:text="@string/OT003_Label_CreateDate"
+            android:textStyle="bold" />
+        <!-- 盘点人 -->
+        <TextView
+            android:id="@+id/labelNmStocktaking"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:text="@string/OT003_Label_NmStocktaking"
+            android:textStyle="bold" />
+        <!-- 盘点日期 -->
+        <TextView
+            android:id="@+id/labelDtStocktaking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:text="@string/OT003_Label_DtStocktaking"
+            android:textStyle="bold" />
+        <!-- add by yxq 2014/10/22 end -->
+    </LinearLayout>
+    <View
+       android:id="@+id/line2"
+       android:layout_width="fill_parent"
+       android:layout_height="0.5dip"
+       android:layout_below="@+id/linearLayout2"
+       android:background="#000000" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!-- 列表 -->
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <com.amassfreight.widget.ScrollGridView
+                    android:id="@+id/listOt003"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:listSelector="@null" >
+                </com.amassfreight.widget.ScrollGridView>
+            </LinearLayout>
+            <!-- 照片 -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <!-- 进仓照片 -->
+                <TextView
+                    android:id="@+id/textInsertPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/OT003_INSERT_PHOTO"
+                    android:textStyle="bold" />
+                <com.amassfreight.widget.ScrollGridView
+                    android:id="@+id/gridView_InsertPhoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:verticalSpacing="20dp" >
+                </com.amassfreight.widget.ScrollGridView>
+                <!-- 唛头照片 -->
+                <TextView
+                    android:id="@+id/textMtPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/OT003_MT_PHOTO"
+                    android:textStyle="bold" />
+                <com.amassfreight.widget.ScrollGridView
+                    android:id="@+id/gridView_MtPhoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:scrollbars="none" >
+                </com.amassfreight.widget.ScrollGridView>
+                <!-- add by yxq 2014/09/12 begin -->
+                <!-- 增值服务照片 -->
+                <TextView
+                    android:id="@+id/textVasPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/OT003_VAS_PHOTO"
+                    android:textStyle="bold" />
+                <com.amassfreight.widget.ScrollGridView
+                    android:id="@+id/gridView_VasPhoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:scrollbars="none" >
+                </com.amassfreight.widget.ScrollGridView>
+                <!-- add by yxq 2014/09/12 end -->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

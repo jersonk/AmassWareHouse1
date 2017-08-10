@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- 新增桩脚牌一览 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="40dip" 
+    >
+
+    <!-- 批号 -->
+    <TextView
+        android:id="@+id/txtBatchNo"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+    <!-- 桩脚牌Id -->
+    <TextView
+        android:id="@+id/txtPileCardNo"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/txtBatchNo"
+        android:textColor="#000000" 
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+    <!-- 库区库位 -->
+    <TextView
+        android:id="@+id/txtPos"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/txtPileCardNo"
+        android:textColor="#000000" 
+        android:layout_centerVertical="true"
+        android:textStyle="bold"/>
+	<!-- 件毛体 -->
+    <TextView
+        android:id="@+id/txtNWS"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/txtPos"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"/>
+</RelativeLayout>
+    

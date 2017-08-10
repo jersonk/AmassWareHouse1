@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/vasList_action"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/title_activity_VA004">
+    </item>
+
+</menu>

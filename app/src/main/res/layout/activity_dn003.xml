@@ -1,0 +1,371 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encode_view"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.ScActivity" >
+
+    <LinearLayout
+        android:id="@+id/layTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top|left"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lblInStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/DN003_INSERT_STORE"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtInStore"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblTH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/DN003_THNO"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layTop"
+        android:layout_marginTop="5dp"
+        android:background="#000000" >
+    </View>
+
+    <ScrollView
+        android:id="@+id/src_Error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.amassfreight.widget.ScrollListView
+                android:id="@+id/result_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </com.amassfreight.widget.ScrollListView>
+
+            <View
+                android:id="@+id/lineGV"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#A1A1A1" >
+            </View>
+
+            <TextView
+                android:id="@+id/lblErrorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/DN003_ERROE_TITLE"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/lineer1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/chk_Error1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk1"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_1" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk2"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_2" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineer2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/chk_Error4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk4"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_4" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk5"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_5" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/chk6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_6"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineer3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/chk_Error7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk7"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_7" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk8"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_8" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_9" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/lineer4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/chk_Error10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk10"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_10" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk11"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_11" />
+
+                <CheckBox
+                    android:id="@+id/chk_Error12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/chk12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_12" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtRemark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:lines="3"
+                android:maxLength="100"
+                android:singleLine="false"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lblErrorPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/DN003_ERROE_PICTURE"
+                android:textStyle="bold" />
+
+            <com.amassfreight.widget.ScrollGridView
+                android:id="@+id/gridView_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" >
+            </com.amassfreight.widget.ScrollGridView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFF"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_SAVE"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_Save_OnClick"
+            android:text="@string/DN003_SAVE" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,579 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encode_view"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.ScActivity" >
+
+    <LinearLayout
+        android:id="@+id/layTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top|left"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblInStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN005_INSERT_STORE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtInStore"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN005_THNO"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblPC"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN005_PC_TITLE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPC"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblNoPilecard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN005_NOPILECARD_ITEM"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNoPilecard"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layTop"
+        android:layout_marginTop="3dp"
+        android:background="#000000" >
+    </View>
+
+    <ScrollView
+        android:id="@+id/src_InsertPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblSlight"
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_DAMAGE_SLIGHT"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Slight"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblDamage"
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_GOODS_DAMAGE"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Damage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+           	</LinearLayout>
+           	
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/lblSerious"
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_DAMAGE_SERIOUS"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Serious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+                
+			</LinearLayout>
+			
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+
+                <TextView
+                    android:id="@+id/lblLogNo"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_LOG_NO"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_LogNo"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+                
+                <TextView
+                    android:id="@+id/lblWarp"
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_NUM_WARP"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Warp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:id="@+id/lblDampSlight"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_NUM_DAMP_SLIGHT"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_DampSlight"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+                <TextView
+                    android:id="@+id/lblDampSerious"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_NUM_DAMP_SERIOUS"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_DampSerious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblOilStained"
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_OIL_STAINED"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_OilStained"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblbark"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_NUM_BARK"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Bark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblPolluteSlight"
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_POLLUTESLIGHT_FLG"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_PolluteSlight"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblgPolluteSerious"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/DN005_POLLUTESERIOUS_FLG"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_PolluteSerious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true"
+                    android:textSize="15sp" >
+                </EditText>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/chk_LogYesFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/lblLogYesFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN005_LOG_YES_FLG" />
+
+                <CheckBox
+                    android:id="@+id/chk_SimplePackageFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/lblSimplePackageFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN005_SIMPLE_PACKAGE_FLG" />
+                
+                <CheckBox
+                    android:id="@+id/chk_flgBark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN003_ERROE_6" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/chk_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/lblOtherFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN005_OTHERS_FLG" />
+                </LinearLayout>
+
+            <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                
+                <CheckBox
+                    android:id="@+id/chk_MarksDifFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/lblMarksDifFlg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN005_MARKS_DIF_FLG" />
+                <CheckBox
+                    android:id="@+id/chk_noMarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="right"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DN002_NO_MARKS" /> 
+            </LinearLayout>
+            -->
+
+            <TextView
+                android:id="@+id/lblRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN005_REMARK"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtRemark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:gravity="left"
+                android:lines="3"
+                android:maxLength="500"
+                android:singleLine="false"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lblPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/DN005_ERROR_PICTURE"
+                android:textStyle="bold" />
+
+            <com.amassfreight.widget.ScrollGridView
+                android:id="@+id/grid_ErrorPicture"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" >
+            </com.amassfreight.widget.ScrollGridView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFF"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_SAVE"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_Save_OnClick"
+            android:text="@string/DN005_SAVE" />
+    </LinearLayout>
+
+</RelativeLayout>

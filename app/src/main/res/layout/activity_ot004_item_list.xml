@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:minHeight="48dip"
+    android:orientation="horizontal" >
+
+    <!-- 桩脚牌 -->
+
+    <TextView
+        android:id="@+id/textPileCard"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="left"
+        android:text="@string/OT003_Label_CreateDate" />
+    <!-- 库区库位 -->
+
+    <TextView
+        android:id="@+id/textPosAndLocation"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:gravity="left"
+        android:text="@string/OT003_Label_CreateDate" />
+    <!-- 件毛体 -->
+
+    <TextView
+        android:id="@+id/textNWS"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="3dp"
+        android:gravity="left"
+        android:text="@string/OT003_Label_CreateDate" />
+    <!-- add by yxq 2014/10/22 begin -->
+    <!-- 创建日期 -->
+
+    <TextView
+        android:id="@+id/textCreateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/OT003_Label_CreateDate" />
+    <!-- add by yxq 2014/10/22 end -->
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="right"
+        android:visibility="gone" />
+
+</LinearLayout>

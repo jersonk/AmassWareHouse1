@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="40dip"  >
+
+    <TextView
+        android:id="@+id/txtVasNmChn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="9"
+        android:gravity="left|center"
+        android:maxLines="3"
+        android:minLines="1"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtQuantityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/txtVasNmChn"
+        android:text="@string/VA004_QuantityName"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:maxLines="3"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/txtQuantityName"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/ckbIsSelect"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:ems="2"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="right"
+        android:scaleType="centerInside" />
+    
+     <TextView
+        android:id="@+id/txtVasExpDtId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

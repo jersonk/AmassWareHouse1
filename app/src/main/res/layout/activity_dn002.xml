@@ -1,0 +1,546 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encode_view"
+    tools:context=".ui.ScActivity" >
+
+    <LinearLayout
+        android:id="@+id/layTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top|left"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblInStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN002_INSERT_STORE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtInStore"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN002_THNO"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblPC"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/DN002_PC_TITLE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPC"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layTop"
+        android:layout_marginTop="3dp"
+        android:background="#000000" >
+    </View>
+
+    <ScrollView
+        android:id="@+id/src_InsertPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/hor_Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="24dp"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/lblZJPTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.8"
+                    android:text="@string/DN002_NOPILECARD_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblJSTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/DN002_JS_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblZLTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/DN002_ZL_ITEM"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblTJTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/DN002_TJ_ITEM"
+                    android:textStyle="bold" />            
+                       
+                <TextView
+                    android:id="@+id/label_depotDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="@string/DN002_label_depotDate"
+                    android:textStyle="bold" />
+                
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#A1A1A1" >
+            </View>
+
+            <com.amassfreight.widget.ScrollListView
+                android:id="@+id/result_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </com.amassfreight.widget.ScrollListView>
+
+            <LinearLayout
+                android:id="@+id/layHJ"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#A1A1A1" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/lblHJ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/DN002_SUM"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblSUMJS"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblSUMZL"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/lblSUMTJ"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblInsertPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/DN002_INSERT_PHOTO"
+                android:textStyle="bold" />
+
+            <com.amassfreight.widget.ScrollGridView
+                android:id="@+id/grid_Insert"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" >
+            </com.amassfreight.widget.ScrollGridView>
+            <View
+        		android:id="@+id/line1"
+        		android:layout_width="fill_parent"
+        		android:layout_height="0.5px"
+        		android:background="#000000" >
+    		</View>
+            <!-- 预配唛头 -->
+            <LinearLayout
+                android:id="@+id/linearLayout_MTDesc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+	           <!-- 唛头： -->
+	           <TextView
+	                android:id="@+id/labelMTDesc"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="top"
+	                android:text="@string/DN002_MT_DESC" 
+	                android:textStyle="bold" />
+	           <TextView
+	                android:id="@+id/textMTDesc"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="10dp" />
+	        </LinearLayout>
+ 
+            <LinearLayout
+                android:id="@+id/linearLayout_MTPhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+	           <!-- 唛头相符 -->
+	           <CheckBox
+	                android:id="@+id/chkMatch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	            <TextView
+	                android:id="@+id/textMatch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_MT_MATCH" />
+	           <!-- 唛头不符 -->
+	           <CheckBox
+	                android:id="@+id/chkNotMatch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	           <TextView
+	                android:id="@+id/textNotMatch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_MT_NOT_MATCH" />
+	           <!-- 无唛头 -->
+	           <CheckBox
+	                android:id="@+id/chkNoMarks"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	           <TextView
+	                android:id="@+id/textNoMarks"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_NO_MARKS" />
+	           <!-- 无唛头 -->
+	           <CheckBox
+	                android:id="@+id/chkPortMarks"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	           <TextView
+	                android:id="@+id/textPortMarks"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_PORT_MARKS" />
+	        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout_Hydraulic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+	           <!-- 进仓编号不符 -->
+	           <CheckBox
+	                android:id="@+id/chkCdOrderDif"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />		           
+	           <TextView
+	                android:id="@+id/textCdOrderDif"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_CD_ORDER_DIF" />   
+	           <!-- 液压车 -->
+	           <CheckBox
+	                android:id="@+id/chkHydraulic"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />	 
+	           <TextView
+	                android:id="@+id/textHydraulic"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_HYDRAULIC_MARKS" />   
+	           <EditText
+                	android:id="@+id/editHydraulic"
+                	android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="2dp"
+                    android:digits="1234567890"
+                    android:ems="10"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="13sp" >
+            </EditText>       
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout_Hydraulic1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+	           <!-- 黑色塑料桶 -->
+	           <CheckBox
+	                android:id="@+id/chkBlackDrum"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />	 
+	           <TextView
+	                android:id="@+id/textBlackDrum"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_BLACK_PLASTIC_DRUM" />   
+	           <!-- 是否使用了夹桶器 -->
+	           <CheckBox
+	                android:id="@+id/chkDrumHandle"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />	 
+	           <TextView
+	                android:id="@+id/textDrumHandle"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_DRUM_HANDLE" />   
+	        </LinearLayout>
+            <TextView
+                android:id="@+id/lblMTPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/DN002_MT_PHOTO"
+                android:textStyle="bold" />
+
+            <com.amassfreight.widget.ScrollGridView
+                android:id="@+id/grid_MT"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" >
+            </com.amassfreight.widget.ScrollGridView>
+            <View
+        		android:id="@+id/lineKarachi"
+        		android:layout_width="fill_parent"
+        		android:layout_height="0.5px"
+        		android:background="#000000" >
+    		</View>
+    		<!-- 检查装箱单、发票 -->
+    		<LinearLayout
+                android:id="@+id/linearLayout_Karachi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+	           <!-- 有箱单、发票 -->
+	           <CheckBox
+	                android:id="@+id/chkKarachiHasInvoice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	            <TextView
+	                android:id="@+id/textKarachiHasInvoice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_KARACHI_HAS_INVOICE" />
+	           <!-- 无箱单、发票 -->
+	           <CheckBox
+	                android:id="@+id/chkKarachiHasNotInvoice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:clickable="true"
+	                android:focusable="false"
+	                android:gravity="right"
+	                android:scaleType="centerInside" />
+	           <TextView
+	                android:id="@+id/textKarachiHasNotInvoice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/DN002_KARACHI_HAS_NOT_INVOICE" />         
+	    	</LinearLayout>  
+    		<TextView
+	        	android:id="@+id/labelKarachi"
+	        	android:layout_width="wrap_content"
+	       		android:layout_height="wrap_content"
+	     		android:layout_gravity="top"
+	 			android:text="@string/DN002_KARACHI" 
+	  			android:textStyle="bold" />	           
+
+   			<com.amassfreight.widget.ScrollGridView
+				android:id="@+id/grid_Karachi"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:horizontalSpacing="10dp"
+	            android:numColumns="3"
+	            android:scrollbars="none"
+	            android:verticalSpacing="20dp" >
+	    	</com.amassfreight.widget.ScrollGridView>
+    	</LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFF"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_port_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_PortInput_OnClick"
+            android:text="@string/DN002_PORT_INPUT" />
+        
+        <Button
+            android:id="@+id/btn_SAVEPHOTO"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_SavePhoto_OnClick"
+            android:text="@string/DN002_SAVEPHOTO_BTN" />
+
+        <Button
+            android:id="@+id/btn_Add"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/default_button_style"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="Btn_Add_OnClick"
+            android:text="@string/DN002_ADD_BTN" />
+    </LinearLayout>
+
+</RelativeLayout>

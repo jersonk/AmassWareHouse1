@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OT002Activity" >
+
+     <!-- 库区 -->
+   	 <TextView
+          android:id="@+id/labelPos"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          android:layout_marginLeft="10dp"/>
+   	 <!-- 列表标题 -->
+     <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelPos"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+	   	 <!-- 库位 -->
+	     <TextView
+	          android:id="@+id/labelViewLocation"
+	          android:layout_width="75dp"
+	          android:layout_height="wrap_content"
+	          android:layout_gravity="center_vertical"
+	          android:text="@string/OT002_Label_Location"/>
+	     <LinearLayout
+	       android:layout_width="140dp"
+           android:layout_height="wrap_content"
+           android:orientation="vertical" >
+           	<!-- 进仓编号 -->
+	     	<TextView
+	          android:id="@+id/labelCdOrder"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:text="@string/OT002_Label_CdOrder"/>
+	       <!-- 同行编号 -->
+	       <TextView
+	          android:id="@+id/labelCoLoader"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:text="@string/OT002_Label_CoLoader"/>
+	      </LinearLayout>
+	      <!-- 桩脚牌 -->
+	   	  <TextView
+	          android:id="@+id/labelViewPileCard"
+	          android:layout_width="75dp"
+	          android:layout_height="wrap_content"
+	          android:layout_gravity="center_vertical"
+	          android:text="@string/OT002_Label_PileCard"/>
+	      <!-- 件数 -->
+	      <TextView
+	          android:id="@+id/labelViewNum"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_gravity="center_vertical"
+	          android:text="@string/OT002_Label_Num"/>
+     </LinearLayout>
+     <View           
+         android:id="@+id/line"                  
+	     android:layout_height="0.5dip"  
+	     android:layout_width="wrap_content"  
+         android:background="#000000" 
+         android:layout_below="@+id/linearLayout1" />  
+      <ListView
+         android:id="@+id/listOt002"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/line" >
+     </ListView> 
+</RelativeLayout>

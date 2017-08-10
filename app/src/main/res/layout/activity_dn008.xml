@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:padding="5dp" >
+            
+            <TextView
+                android:id="@+id/textCCZYN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/DN008_cczyn" />
+
+            <EditText
+                android:id="@+id/editCCZYN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="@+id/textCCZYN"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:editable="false" />
+
+            <TextView
+                android:id="@+id/textCCCZN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/DN008_ccczn" />
+
+            <EditText
+                android:id="@+id/editCCCZN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="@+id/textCCCZN"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:editable="false" />
+            
+            <TextView
+                android:id="@+id/textJJN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/DN008_jjn" />
+
+            <EditText
+                android:id="@+id/editJJN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="@+id/textJJN"
+                android:ems="10"
+                android:inputType="textMultiLine" 
+				android:editable="false" />
+
+            <TextView
+                android:id="@+id/textFQN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/DN008_fqn" />
+
+            <EditText
+                android:id="@+id/editFQN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="@+id/textFQN"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:editable="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

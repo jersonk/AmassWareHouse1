@@ -1,0 +1,242 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encode_view"
+    tools:context=".ui.ScActivity" >
+
+    <LinearLayout
+        android:id="@+id/layTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top|left"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lbl_cdOrder_orgin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/VA003_transfer_orgin_order"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_cdOrder_orgin"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lbl_cdOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/VA003_transfer_to_order"
+                android:textStyle="bold" />
+            
+            <EditText
+                android:id="@+id/edit_cdOrder"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:textStyle="bold" >
+            </EditText>            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lbl_cdLoader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/VA003_transfer_to_loader"
+                android:textStyle="bold" />
+            
+            <EditText
+                android:id="@+id/edit_coLoader"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:textStyle="bold" >
+            </EditText>            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lbl_noBatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"            
+                android:textStyle="bold" />
+            <!-- android:text="@string/VA003_transfer_pilecard" -->  
+
+            <TextView
+                android:id="@+id/txt_noBatch"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layTop"
+        android:layout_marginTop="3dp"
+        android:background="#000000" >
+    </View>
+
+    <ScrollView
+        android:id="@+id/src_InsertPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="100dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/hor_Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >    
+           
+            <TextView
+                android:id="@+id/lblMTPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/DN002_INSERT_PHOTO"
+                android:textStyle="bold" />
+
+            <com.amassfreight.widget.ScrollGridView
+                android:id="@+id/grid_Insert"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" >
+            </com.amassfreight.widget.ScrollGridView>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFF"
+        android:gravity="right|center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:gravity="right|center_vertical|center_horizontal"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_savePoto"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/default_button_style"
+                android:onClick="Btn_SavePhoto_OnClick"
+                android:text="@string/DN002_SAVEPHOTO_BTN" />
+
+            <Button
+                android:id="@+id/btn_transfer"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/default_button_style"
+                android:onClick="Btn_Transfer_OnClick"
+                android:text="@string/VA003_button_transfer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:gravity="right|center_vertical|center_horizontal"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_pilecard"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dip"
+                android:background="@drawable/default_button_style"
+                android:onClick="Btn_PileCardPrint_OnClick"
+                android:text="@string/VA003_Print" />
+
+            <Button
+                android:id="@+id/btn_batch"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dip"
+                android:background="@drawable/default_button_style"
+                android:onClick="Btn_BatchPrint_OnClick"
+                android:text="@string/VA003_Print_batch" />
+
+            <Button
+                android:id="@+id/btn_order_print"
+                style="@style/RCTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dip"
+                android:background="@drawable/default_button_style"
+                android:onClick="Btn_OrderPrint_OnClick"
+                android:text="@string/VA003_Print_Confirm_This" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

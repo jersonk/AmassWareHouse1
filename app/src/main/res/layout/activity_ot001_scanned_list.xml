@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OT001Activity" >
+     <!-- 列表明细  -->
+     <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:minHeight="30dip">
+        <LinearLayout
+        	android:id="@+id/layout2"
+        	android:layout_width="105dp"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical">
+        	<!-- 进仓编号 -->
+   	 		<TextView
+        		android:id="@+id/textViewCdOrder"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textColor="@color/blue"/>
+   	 		<!-- 同行编号 -->
+   	 		<TextView
+        		android:id="@+id/textViewCoLoader"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"/>
+   	 	</LinearLayout>
+   	 	 <!-- 桩脚牌 -->
+   	 	<TextView
+        	android:id="@+id/textViewPileCard"
+        	android:layout_width="60dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:textStyle="bold"
+        	android:layout_gravity="center_vertical"/>
+   	 	<!-- 件数 -->
+   	 	<TextView
+        	android:id="@+id/textViewNum"
+        	android:layout_width="50dp"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center_vertical"/>
+   	 	<!-- 实际 -->
+   	 	<TextView
+        	android:id="@+id/textViewFact"
+        	android:layout_width="50dp"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:layout_gravity="center_vertical"/>
+     	<!-- 状态 -->
+   	 	<TextView
+        	android:id="@+id/textViewStatus"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textStyle="bold"
+        	android:layout_marginRight="10dp"
+        	android:layout_gravity="center_vertical"/>
+     </LinearLayout>
+</RelativeLayout>
