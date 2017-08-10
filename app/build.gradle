@@ -13,7 +13,7 @@ android {
         targetSdkVersion 18
 
         versionCode 169
-        versionName "2.0 build 1" //测试包名
+        versionName "2.0 build 2" //测试包名
     }
 
     lintOptions {
