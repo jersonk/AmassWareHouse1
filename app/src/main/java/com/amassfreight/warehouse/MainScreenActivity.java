@@ -40,6 +40,7 @@ import com.amassfreight.base.net.NetworkHelper;
 import com.amassfreight.domain.FunctionMenu;
 import com.amassfreight.domain.IUser;
 import com.amassfreight.domain.TreeFunMenu;
+import com.amassfreight.utils.LogUtil;
 import com.amassfreight.utils.SessionHelper;
 import com.amassfreight.utils.Utils;
 import com.loopj.android.http.TextHttpResponseHandler;
@@ -449,12 +450,13 @@ public class MainScreenActivity extends FragmentActivity implements
 
 					FunctionMenu data = (FunctionMenu) parent
 							.getItemAtPosition(pos);
-					Intent intent = new Intent(MainScreenActivity.this, Utils
-							.GetClassByName(data.getMenuClass()));
-					// intent.putExtra("MenuTitle", data.getMenuName());
 
-					startActivity(intent);
-					// menuView.setItemChecked(pos, true);
+					//// TODO: 2017/8/11 临时处理
+					if (!"ui.DN007Activity".equals(data.getMenuClass())){
+						Intent intent = new Intent(MainScreenActivity.this, Utils
+								.GetClassByName(data.getMenuClass()));
+						startActivity(intent);
+					}
 				}
 
 			});

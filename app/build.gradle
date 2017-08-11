@@ -13,7 +13,7 @@ android {
         targetSdkVersion 18
 
         versionCode 169
-        versionName "2.0 build 2" //测试包名
+        versionName "2.0 build 3" //测试包名
     }
 
     lintOptions {
@@ -74,9 +74,9 @@ android {
         }
 
         release {
-            minifyEnabled false   //混淆配置(暂不配置)
+            minifyEnabled true   //混淆配置(暂不配置)
             zipAlignEnabled true //压缩优化
-            shrinkResources false //移除无用的资源文件(同步混淆)
+            shrinkResources true //移除无用的资源文件(同步混淆)
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
