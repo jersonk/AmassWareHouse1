@@ -19,8 +19,41 @@ android {
     lintOptions {
         abortOnError false
     }
+    //包名配置
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "amass_${variant.productFlavors[0].name}_v${defaultConfig.versionName}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+    //多渠道打包配置
+    productFlavors {
+        dev {
+            minSdkVersion 21    //开发中使用的最低支持版本
+        }
+        prod {
+            minSdkVersion 15     //项目实际的最低支持版本
+        }
+
+        AND_Package {}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL: name]
+        }
+    }
 
     signingConfigs {
+
+        debug {
+            storeFile file("amass.keystore")
+            storePassword "123456"
+            keyAlias "amass.keystore"
+            keyPassword "123456"
+        }
+
         release {
             storeFile file("amass.keystore")
             storePassword "123456"
@@ -31,10 +64,20 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            minifyEnabled false   //混淆配置(暂不配置)
+            zipAlignEnabled true //压缩优化
+            shrinkResources false //移除无用的资源文件(同步混淆)
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
         release {
             minifyEnabled false   //混淆配置(暂不配置)
             zipAlignEnabled true //压缩优化
             shrinkResources false //移除无用的资源文件(同步混淆)
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
