@@ -1,0 +1,18 @@
+
+###################################### 版本修改日志 ###########################################
+
+BuildVersion
+
+# ************************************************  #
+------VersionCode 169
+------VersionName 2.0 build 2
+------Modify Time : 2017.8.11 上午10：10
+
+  更新日志：
+  1.Android eclipse 项目迁移至 Android studio
+  2.新增测试签名 amass.keystore
+  3.修改项目结构
+  4.项目临时上传至git reponsitory
+        地址URL: https://github.com/jersonk/AmassWareHouse1.git
+
+# ************************************************  #
